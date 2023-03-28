@@ -10,44 +10,64 @@ namespace Ejerciciosss
     {
         static void Main(string[] args)
         {
+            bool continueFlag = true;
 
-            Triangle t = new Triangle(10, 20);
-            Shape s = new Shape();
-            Shape st = t;
+            while (continueFlag)
+            {
+                Shape shape = null;
 
+                string selection;
 
-            Console.WriteLine($"Triangle: {t.CalculateArea()}");
-            //Console.WriteLine($"Shape: {s.CalculateArea()}");
-            Console.WriteLine($"ST: {st.CalculateArea()}");
+                Console.WriteLine("Introduce el número de la figura: ");
+                Console.WriteLine("1. Triángulo");
+                Console.WriteLine("2. Rectángulo");
+                Console.WriteLine("3. Cuadrado");
+                selection = Console.ReadLine();
 
+                switch (selection)
+                {
+                    case "1":
+                        float triangleB;
+                        float triangleH;
+                        Console.WriteLine("Introduce la base del triángulo: ");
+                        triangleB = float.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce la altura del triángulo: ");
+                        triangleH = float.Parse(Console.ReadLine());
+                        shape = new Triangle(triangleB, triangleH);
+                        break;
 
+                    case "2":
+                        float rectangleB;
+                        float rectangleH;
+                        Console.WriteLine("Introduce la base del rectángulo: ");
+                        rectangleB = float.Parse(Console.ReadLine());
+                        Console.WriteLine("Introduce la altura del rectángulo: ");
+                        rectangleH = float.Parse(Console.ReadLine());
+                        shape = new Rectangle(rectangleB, rectangleH);
+                        break;
+                    case "3":
+                        float side;
+                        Console.WriteLine("Introduce el lado: ");
+                        side = float.Parse(Console.ReadLine());
+                        shape = new Square(side);
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida");
+                        break;
+                }
+
+                if (shape != null)
+                {
+                    Console.WriteLine($"El área es {shape.CalculateArea()}");
+                }
+                Console.WriteLine("Introducir si para continuar ingresando figuras: ");
+                string option = Console.ReadLine();
+                if (option != "si")
+                {
+                    continueFlag = false;
+                }
+            }
             Console.ReadLine();
-
-
-
-
-
-
-
-
-            /*
-            float b;
-            float h;
-            Triangle t;
-
-            Console.WriteLine("Introducir la base: ");
-            b = float.Parse(Console.ReadLine());
-
-            Console.WriteLine("Introducir la altura: ");
-            h = float.Parse(Console.ReadLine());
-
-            t = new Triangle(b, h);
-
-            Console.WriteLine($"Area: {t.CalculateArea()}");
-
-            Shape s = new Shape();
-            Console.WriteLine($"Area: {s.CalculateArea()}");
-            Console.ReadLine();*/
         }
     }
 }
