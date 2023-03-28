@@ -18,7 +18,7 @@ namespace Ejerciciosss
 
                 string selection;
 
-                Console.WriteLine("Introduce el número de la figura: ");
+                Console.WriteLine("Introduce el número: ");
                 Console.WriteLine("1. Triángulo");
                 Console.WriteLine("2. Rectangulo");
                 Console.WriteLine("3. Cuadrado");
@@ -60,7 +60,7 @@ namespace Ejerciciosss
                 {
                     Console.WriteLine($"El área es {shape.CalculateArea()}");
                 }
-                Console.WriteLine("Introducir si para continuar ingresando figuras: ");
+                Console.WriteLine("presiona si: ");
                 string option = Console.ReadLine();
                 if (option != "si")
                 {
