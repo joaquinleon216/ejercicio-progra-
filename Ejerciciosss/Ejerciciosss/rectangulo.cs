@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Ejerciciosss
 {
-    class rectangulo : Shape
+    class Rectangulo : Shape
     {
-        private float ba;
-        private float al;
+        private float b;
+        private float h;
 
-        public rectangulo(float ba, float al)
+        public Rectangulo(float b, float h)
         {
-            this.ba = ba
-            this.al = al;
+            this.b = b;
+            this.h = h;
         }
 
-        public override float CalculateAreaRectangulo()
+        public override float CalculateArea()
         {
-            return ba * al;
+            return b * h;
         }
     }
 }

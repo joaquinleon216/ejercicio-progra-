@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ejerciciosss
 {
-    class Square : Shape
+    class Cuadrado : Shape
     {
         private float side;
 
-        public Square(float side)
+        public Cuadrado(float side)
         {
             this.side = side;
         }

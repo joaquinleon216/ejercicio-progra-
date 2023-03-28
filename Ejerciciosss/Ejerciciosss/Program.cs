@@ -20,7 +20,7 @@ namespace Ejerciciosss
 
                 Console.WriteLine("Introduce el número de la figura: ");
                 Console.WriteLine("1. Triángulo");
-                Console.WriteLine("2. Rectángulo");
+                Console.WriteLine("2. Rectangulo");
                 Console.WriteLine("3. Cuadrado");
                 selection = Console.ReadLine();
 
@@ -37,19 +37,19 @@ namespace Ejerciciosss
                         break;
 
                     case "2":
-                        float rectangleB;
-                        float rectangleH;
+                        float rectanguloB;
+                        float rectanguloH;
                         Console.WriteLine("Introduce la base del rectángulo: ");
-                        rectangleB = float.Parse(Console.ReadLine());
+                        rectanguloB = float.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce la altura del rectángulo: ");
-                        rectangleH = float.Parse(Console.ReadLine());
-                        shape = new Rectangle(rectangleB, rectangleH);
+                        rectanguloH = float.Parse(Console.ReadLine());
+                        shape = new Rectangulo(rectanguloB, rectanguloH);
                         break;
                     case "3":
                         float side;
                         Console.WriteLine("Introduce el lado: ");
                         side = float.Parse(Console.ReadLine());
-                        shape = new Square(side);
+                        shape = new Cuadrado(side);
                         break;
                     default:
                         Console.WriteLine("Opción no válida");
